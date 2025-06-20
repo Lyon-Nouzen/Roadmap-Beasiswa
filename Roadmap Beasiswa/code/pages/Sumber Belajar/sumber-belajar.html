@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platform Belajar Gratis - Roadmap Beasiswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-card {
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.1) 0%,
+          rgba(118, 75, 162, 0.1) 100%
+        );
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .feature-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-card {
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.1) 0%,
+          rgba(118, 75, 162, 0.1) 100%
+        );
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .feature-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .progress-bar {
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+        background-size: 200% 100%;
+        animation: gradient 3s ease infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen"
+  >
+    <div
+      class="bg-gradient-to-b from-slate-900/50 to bg-[#060910]/50 text-gray-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-8 text-gray-400 text-sm font-medium backdrop-blur-sm"
+      >
+        <div
+          class="flex items-center justify-between md:justify-center md:gap-8"
+        >
+          <!-- Logo & Primary Nav -->
+          <div class="flex items-center gap-8">
+            <a href="/code/index.html" class="card-hover">
+              <img
+                src="/code/image/mini logo.png"
+                alt="Roadmap Beasiswa Logo"
+                class="w-[30px] h-[30px]"
+              />
+            </a>
+            <ul class="hidden md:flex items-center gap-7">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-200"
+                  >Kalender Beasiswa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-200"
+                  >Tes Minat Bakat</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors duration-200"
+                  >Pertanyaan</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blue-300 hover:text-white relative"
+                  >Artikel
+                  <span
+                    class="text-xs bg-blue-300 p-1 hover:bg-white text-slate-900"
+                    >TERBARU</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Search, Login, Signup for Desktop -->
+          <div class="hidden md:flex items-center gap-7">
+            <button class="hover:text-white">Login</button>
+            <button
+              class="gradient-bg rounded-full px-6 py-2 text-white hover:shadow-lg transition-all duration-200"
+            >
+              Sign Up
+            </button>
+          </div>
+          <!-- Hamburger Icon -->
+          <button
+            id="menu-btn"
+            class="block md:hidden focus:outline-none"
+            aria-label="Buka Menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-4 6h4"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <ul class="flex flex-col items-center gap-4 mt-6">
+            <li>
+              <a
+                href="#"
+                class="hover:text-white transition-colors duration-200"
+                >Kalender Beasiswa</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-white transition-colors duration-200"
+                >Tes Bakat Minat</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-white transition-colors duration-200"
+                >Pertanyaan</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-blue-300 hover:text-white relative"
+                >Artikel
+                <span
+                  class="text-xs bg-blue-300 p-1 hover:bg-white text-slate-900"
+                  >TERBARU</span
+                >
+              </a>
+            </li>
+            <li class="w-full">
+              <a
+                href="#"
+                role="button"
+                class="hover:text-white w-full block text-center"
+                >Login</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#"
+                role="button"
+                class="gradient-bg rounded-full px-6 py-2 text-white w-full block text-center hover:shadow-lg transition-all duration-200"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-16">
+          <h1
+            class="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+          >
+            Platform Belajar Gratis
+          </h1>
+          <p class="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Temukan sumber daya terbaik untuk latihan TOEFL/IELTS, panduan esai
+            beasiswa, dan komunitas belajar online yang mendukung perjalanan
+            akademis Anda.
+          </p>
+
+          <!-- Progress Indicator -->
+          <div class="mt-8 max-w-2xl mx-auto">
+            <div class="flex justify-between text-sm text-gray-400 mb-2">
+              <span>Platform TOEFL/IELTS</span>
+              <span>Panduan Esai</span>
+              <span>Komunitas Online</span>
+            </div>
+            <div class="w-full bg-slate-700 rounded-full h-2">
+              <div class="progress-bar h-2 rounded-full w-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform TOEFL/IELTS Section -->
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white mb-4">
+              Platform Latihan TOEFL/IELTS
+            </h2>
+            <p class="text-gray-400 text-lg">
+              Pilih platform terbaik untuk persiapan tes bahasa Inggris Anda
+            </p>
+          </div>
+
+          <!-- Timeline for TOEFL/IELTS Platforms -->
+          <div class="relative wrap overflow-hidden p-10 h-full mb-12">
+            <div
+              class="absolute border-2-2 border-blue-500 h-full border"
+              style="left: 50%"
+            ></div>
+
+            <!-- Platform Cards in Timeline -->
+            <div
+              class="mb-8 flex justify-between items-center w-full right-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 bg-blue-500 shadow-xl w-8 h-8 rounded-full"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">1</span>
+              </div>
+              <div
+                class="order-1 bg-slate-900 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-blue-500 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">Exam English</h3>
+                <p class="text-sm text-gray-400">
+                  Situs web populer dengan soal latihan TOEFL gratis, mencakup
+                  Reading, Listening, Speaking, dan Writing dengan kunci jawaban
+                  dan penjelasan mendetail.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 bg-purple-500 shadow-xl w-8 h-8 rounded-full"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">2</span>
+              </div>
+              <div
+                class="order-1 bg-slate-900 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-purple-500 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">TOEFL.ID</h3>
+                <p class="text-sm text-gray-400">
+                  Materi belajar TOEFL online gratis dengan simulasi tes
+                  prediction, latihan Listening dan Reading, serta ratusan soal
+                  siap pakai.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mb-8 flex justify-between items-center w-full right-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 bg-green-500 shadow-xl w-8 h-8 rounded-full"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">3</span>
+              </div>
+              <div
+                class="order-1 bg-slate-900 rounded-lg shadow-xl w-5/12 px-6 py-4 border border-green-500 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">BestMyTest</h3>
+                <p class="text-sm text-gray-400">
+                  Lebih dari 2000 bahan belajar TOEFL dengan sistem TOEFL Tutor
+                  eksklusif dan analisis umpan balik detail untuk Speaking dan
+                  Writing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Platform Cards -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-slate-700 card-hover"
+            >
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+                <h3 class="text-lg font-bold text-white">TST PREP</h3>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Tes gratis dan bahan belajar dengan video YouTube dan sumber PDF
+                yang dapat diunduh.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-slate-700 card-hover"
+            >
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                <h3 class="text-lg font-bold text-white">PreScholar</h3>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Berbagai jenis tes standar termasuk TOEFL, GRE, GMAT, SAT dengan
+                kursus dan artikel persiapan.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-slate-700 card-hover"
+            >
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
+                <h3 class="text-lg font-bold text-white">Magoosh</h3>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Bahan belajar gratis untuk TOEFL termasuk latihan soal, video
+                pembelajaran, dan strategi persiapan.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-slate-700 card-hover"
+            >
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-indigo-500 rounded-full mr-3"></div>
+                <h3 class="text-lg font-bold text-white">TOEFL Go Anywhere</h3>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Bahan persiapan TOEFL gratis dengan tes latihan, panduan
+                persiapan, dan aplikasi TOEFL Go!
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-slate-700 card-hover"
+            >
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-teal-500 rounded-full mr-3"></div>
+                <h3 class="text-lg font-bold text-white">
+                  ETS TOEFL iBT TestReady
+                </h3>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Portal persiapan TOEFL iBT yang dipersonalisasi dengan tes
+                latihan gratis dan rencana belajar.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-slate-700 card-hover"
+            >
+              <div class="flex items-center mb-4">
+                <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+                <h3 class="text-lg font-bold text-white">British Council</h3>
+              </div>
+              <p class="text-gray-400 text-sm">
+                Tes latihan IELTS gratis dan berbagai sumber daya untuk membantu
+                persiapan tes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panduan Esai Section -->
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white mb-4">
+              Panduan Esai Beasiswa
+            </h2>
+            <p class="text-gray-400 text-lg">
+              Pelajari cara menulis esai beasiswa yang memukau
+            </p>
+          </div>
+
+          <!-- Creative Cards Layout -->
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-xl card-hover"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">PrepAdviser</h3>
+                <p class="text-blue-100">
+                  Panduan dan tips untuk menulis esai beasiswa yang kuat dengan
+                  contoh esai sukses dan umpan balik profesional.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-purple-600 to-purple-800 p-8 rounded-xl card-hover"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">
+                  GoStudyAustralia
+                </h3>
+                <p class="text-purple-100">
+                  Panduan cara menulis esai beasiswa efektif dengan struktur
+                  esai, teknik penulisan, dan contoh esai.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-green-600 to-green-800 p-8 rounded-xl card-hover"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">
+                  Scholarshippositions
+                </h3>
+                <p class="text-green-100">
+                  Contoh esai beasiswa dan panduan menulis esai kuat untuk
+                  berbagai jenis beasiswa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Komunitas Online Section -->
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white mb-4">
+              Komunitas Belajar Online
+            </h2>
+            <p class="text-gray-400 text-lg">
+              Bergabunglah dengan komunitas yang mendukung perjalanan belajar
+              Anda
+            </p>
+          </div>
+
+          <!-- Interactive Community Cards -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-red-500 card-hover group"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-4 h-4 bg-red-500 rounded-full mr-3 group-hover:animate-pulse"
+                ></div>
+                <h3 class="text-lg font-bold text-white">Reddit</h3>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Subreddit r/IELTS dan r/TOEFL untuk diskusi, berbagi sumber
+                daya, tips, dan pengalaman.
+              </p>
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-red-500 bg-opacity-20 text-red-300 text-xs rounded"
+                  >Gratis</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-500 bg-opacity-20 text-blue-300 text-xs rounded"
+                  >Aktif</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-blue-500 card-hover group"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-4 h-4 bg-blue-500 rounded-full mr-3 group-hover:animate-pulse"
+                ></div>
+                <h3 class="text-lg font-bold text-white">Facebook Groups</h3>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Grup "TOEFL iBT Preparation" dan "IELTS Preparation" untuk
+                bertukar ide dan dukungan.
+              </p>
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-blue-500 bg-opacity-20 text-blue-300 text-xs rounded"
+                  >Gratis</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-500 bg-opacity-20 text-green-300 text-xs rounded"
+                  >Komunitas</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-green-500 card-hover group"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-4 h-4 bg-green-500 rounded-full mr-3 group-hover:animate-pulse"
+                ></div>
+                <h3 class="text-lg font-bold text-white">Duolingo Community</h3>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Komunitas untuk diskusi dan bertukar tips tentang persiapan tes
+                dan beasiswa.
+              </p>
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-green-500 bg-opacity-20 text-green-300 text-xs rounded"
+                  >Gratis</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-500 bg-opacity-20 text-purple-300 text-xs rounded"
+                  >Interaktif</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 p-6 rounded-lg border border-purple-500 card-hover group"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-4 h-4 bg-purple-500 rounded-full mr-3 group-hover:animate-pulse"
+                ></div>
+                <h3 class="text-lg font-bold text-white">IELTS Liz Forum</h3>
+              </div>
+              <p class="text-gray-400 text-sm mb-4">
+                Forum untuk bertanya dan berbagi tentang IELTS, persiapan tes,
+                dan penulisan esai.
+              </p>
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-purple-500 bg-opacity-20 text-purple-300 text-xs rounded"
+                  >Gratis</span
+                >
+                <span
+                  class="px-2 py-1 bg-yellow-500 bg-opacity-20 text-yellow-300 text-xs rounded"
+                  >Spesialis</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Community Info -->
+          <div class="mt-8 bg-slate-900 p-6 rounded-lg border border-slate-700">
+            <h3 class="text-xl font-bold text-white mb-4">
+              Komunitas Beasiswa Lainnya
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4 text-gray-400">
+              <div>
+                <p>
+                  <strong>Scholarship带你飞</strong> - Komunitas WeChat untuk
+                  informasi dan dukungan beasiswa
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>Scholarship Update</strong> - Grup Facebook untuk
+                  update informasi beasiswa terkini
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div
+          class="text-center bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-xl"
+        >
+          <h3 class="text-2xl font-bold text-white mb-4">
+            Mulai Perjalanan Belajar Anda
+          </h3>
+          <p class="text-blue-100 mb-6">
+            Pilih platform yang sesuai dengan kebutuhan Anda dan mulai persiapan
+            untuk masa depan yang gemilang.
+          </p>
+          <button
+            class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Jelajahi Platform
+          </button>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-12 text-center text-gray-400 max-w-3xl mx-auto">
+          <p class="text-sm">
+            Harap dicatat bahwa beberapa platform mungkin memerlukan pendaftaran
+            atau pembayaran untuk akses penuh, tetapi sebagian besar menawarkan
+            beberapa fitur dan sumber daya gratis. Selalu periksa syarat dan
+            ketentuan serta kebijakan privasi sebelum menggunakan platform
+            tersebut.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

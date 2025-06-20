@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Program Beasiswa Fulbright, DAAD, dan Erasmus - Roadmap Beasiswa
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      
+      .timeline-card {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        backdrop-filter: blur(10px);
+      }
+      
+      .feature-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      
+      .timeline-card {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        backdrop-filter: blur(10px);
+      }
+      
+      .feature-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <div class="bg-gradient-to-b from-slate-900/50 to bg-[#060910]/50 text-gray-300">
+      <nav
+        class="container mx-auto px-6 py-8 text-gray-400 text-sm font-medium backdrop-blur-sm"
+      >
+        <div
+          class="flex items-center justify-between md:justify-center md:gap-8"
+        >
+          <!-- Logo & Primary Nav -->
+          <div class="flex items-center gap-8">
+            <a href="/code/index.html" class="card-hover">
+              <img
+                src="/code/image/mini logo.png"
+                alt="Roadmap Beasiswa Logo"
+                class="w-[30px] h-[30px]"
+              />
+            </a>
+            <ul class="hidden md:flex items-center gap-7">
+              <li>
+                <a href="#" class="hover:text-white transition-colors duration-200">Kalender Beasiswa</a>
+              </li>
+              <li><a href="#" class="hover:text-white transition-colors duration-200">Tes Minat Bakat</a></li>
+              <li><a href="#" class="hover:text-white transition-colors duration-200">Pertanyaan</a></li>
+              <li>
+                <a href="#" class="text-blue-300 hover:text-white relative"
+                  >Artikel
+                  <span
+                    class="text-xs bg-blue-300 p-1 hover:bg-white text-slate-900"
+                    >TERBARU</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Search, Login, Signup for Desktop -->
+          <div class="hidden md:flex items-center gap-7">
+            <button class="hover:text-white">Login</button>
+            <button class="gradient-bg rounded-full px-6 py-2 text-white hover:shadow-lg transition-all duration-200">
+              Sign Up
+            </button>
+          </div>
+          <!-- Hamburger Icon -->
+          <button
+            id="menu-btn"
+            class="block md:hidden focus:outline-none"
+            aria-label="Buka Menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-4 6h4"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <ul class="flex flex-col items-center gap-4 mt-6">
+            <li><a href="#" class="hover:text-white transition-colors duration-200">Kalender Beasiswa</a></li>
+            <li><a href="#" class="hover:text-white transition-colors duration-200">Tes Bakat Minat</a></li>
+            <li><a href="#" class="hover:text-white transition-colors duration-200">Pertanyaan</a></li>
+            <li>
+              <a href="#" class="text-blue-300 hover:text-white relative"
+                >Artikel
+                <span
+                  class="text-xs bg-blue-300 p-1 hover:bg-white text-slate-900"
+                  >TERBARU</span
+                >
+              </a>
+            </li>
+            <li class="w-full">
+              <a
+                href="#"
+                role="button"
+                class="hover:text-white w-full block text-center"
+                >Login</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#"
+                role="button"
+                class="gradient-bg rounded-full px-6 py-2 text-white w-full block text-center hover:shadow-lg transition-all duration-200"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="container mx-auto px-6 py-12">
+        <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-6">
+          Program Beasiswa Fulbright, DAAD, dan Erasmus
+        </h1>
+        <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+          Berikut adalah informasi detail tentang program beasiswa Fulbright,
+          DAAD, dan Erasmus untuk mahasiswa.
+        </p>
+
+        <!-- Fulbright Section -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">
+            Fulbright
+          </h2>
+
+          <!-- Timeline Section -->
+          <div class="relative wrap overflow-hidden p-10 h-full mb-12">
+            <div
+              class="absolute border-2-2 border-purple-500 h-full border"
+              style="left: 50%"
+            ></div>
+
+            <!-- Right Timeline Item -->
+            <div
+              class="mb-8 flex justify-between items-center w-full right-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 gradient-bg shadow-xl w-12 h-12 rounded-full card-hover"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">1</span>
+              </div>
+              <div
+                class="order-1 timeline-card rounded-lg shadow-xl w-5/12 px-6 py-4 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">Pendaftaran</h3>
+                <p class="text-sm text-gray-400">
+                  Biasanya dibuka dari bulan Januari hingga Maret setiap
+                  tahunnya.
+                </p>
+              </div>
+            </div>
+
+            <!-- Left Timeline Item -->
+            <div
+              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 gradient-bg shadow-xl w-12 h-12 rounded-full card-hover"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">2</span>
+              </div>
+              <div
+                class="order-1 timeline-card rounded-lg shadow-xl w-5/12 px-6 py-4 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">
+                  Seleksi dan Pengumuman
+                </h3>
+                <p class="text-sm text-gray-400">
+                  Seleksi dilakukan setelah periode pendaftaran, dan hasilnya
+                  diumumkan pada bulan April atau Mei.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fulbright Pros and Cons -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Pros -->
+            <div class="feature-card p-8 rounded-2xl card-hover">
+              <h3 class="text-xl font-bold text-white mb-4">Pro</h3>
+              <ul class="space-y-3 list-disc list-inside text-gray-400">
+                <li>
+                  <strong>Peluang Pendidikan di Jenjang Tinggi:</strong>
+                  Menyediakan kesempatan untuk menempuh pendidikan di
+                  universitas-universitas ternama di Amerika Serikat.
+                </li>
+                <li>
+                  <strong>Bantuan Biaya Penuh:</strong> Beasiswa ini menanggung
+                  biaya pendidikan, termasuk SPP dan biaya akademik lainnya.
+                  Selain itu, juga mencakup biaya hidup berupa uang saku
+                  bulanan.
+                </li>
+                <li>
+                  <strong>Akses Internasional:</strong> Memberikan kesempatan
+                  untuk belajar di perguruan tinggi luar negeri yang diakui.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cons -->
+            <div class="feature-card p-8 rounded-2xl card-hover">
+              <h3 class="text-xl font-bold text-white mb-4">Kontra</h3>
+              <ul class="space-y-3 list-disc list-inside text-gray-400">
+                <li>
+                  <strong>Persyaratan Akademik dan Non-Akademik Tinggi:</strong>
+                  Memerlukan prestasi akademik yang baik dan IPK minimal 3.0.
+                  Selain itu, mahasiswa juga harus aktif dalam kegiatan
+                  ekstrakurikuler dan memiliki prestasi di bidang akademik atau
+                  non-akademik minimal di tingkat kota/kotamadya.
+                </li>
+                <li>
+                  <strong>Persaingan Ketat:</strong> Program ini sangat
+                  kompetitif dengan banyak calon pendaftar setiap tahunnya.
+                </li>
+                <li>
+                  <strong>Persyaratan Dokumen yang Ribet:</strong> Pendaftar
+                  harus menyiapkan berbagai dokumen seperti sertifikat prestasi,
+                  rekomendasi dari pihak berwenang, LoA Unconditional atau surat
+                  keterangan aktif kuliah, sertifikat UKBI, sertifikat bahasa
+                  Inggris (jika tujuan luar negeri), esai dengan judul tertentu,
+                  rencana studi atau proposal disertasi, dan lain-lain.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fulbright Requirements -->
+          <div
+            class="feature-card p-8 rounded-2xl card-hover mb-12"
+          >
+            <h3 class="text-xl font-bold text-white mb-4">Persyaratan</h3>
+            <ul class="space-y-3 list-disc list-inside text-gray-400">
+              <li><strong>Kewarganegaraan:</strong> WNI.</li>
+              <li>
+                <strong>Status Mahasiswa:</strong> Mahasiswa baru atau aktif
+                yang berada di semester 1 hingga 3 untuk jenjang S1, S2, atau
+                S3.
+              </li>
+              <li>
+                <strong>Prestasi Akademik:</strong> IPK minimal 3,00 untuk S1,
+                3,25 untuk S2, dan 3,40 untuk S3.
+              </li>
+              <li>
+                <strong>Prestasi Non-Akademik:</strong> Memiliki sertifikat
+                prestasi akademik atau non-akademik tingkat
+                internasional/nasional.
+              </li>
+              <li>
+                <strong>Rekomendasi:</strong> Mendapatkan rekomendasi dari guru
+                BK (untuk S1) atau pimpinan perguruan tinggi/pembimbing akademik
+                (untuk S2 dan S3).
+              </li>
+              <li>
+                <strong>Perguruan Tinggi:</strong> Diterima di perguruan tinggi
+                dalam negeri minimal akreditasi B/Baik Sekali atau perguruan
+                tinggi luar negeri yang diakui oleh Direktorat Jenderal
+                Pendidikan Tinggi (Ditjen Dikti).
+              </li>
+              <li>
+                <strong>Lain-lain:</strong> Bukan dosen, guru, tenaga
+                kependidikan, atau pelaku budaya. Hanya untuk kelas reguler.
+                Berkomitmen mempertahankan IPK minimal yang ditentukan.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DAAD Section -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">DAAD</h2>
+
+          <!-- Timeline Section -->
+          <div class="relative wrap overflow-hidden p-10 h-full mb-12">
+            <div
+              class="absolute border-2-2 border-purple-500 h-full border"
+              style="left: 50%"
+            ></div>
+
+            <!-- Right Timeline Item -->
+            <div
+              class="mb-8 flex justify-between items-center w-full right-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 gradient-bg shadow-xl w-12 h-12 rounded-full card-hover"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">1</span>
+              </div>
+              <div
+                class="order-1 timeline-card rounded-lg shadow-xl w-5/12 px-6 py-4 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">Pendaftaran</h3>
+                <p class="text-sm text-gray-400">
+                  Pendaftaran untuk program DAAD 2025 dibuka dari bulan April
+                  hingga Juni 2025.
+                </p>
+              </div>
+            </div>
+
+            <!-- Left Timeline Item -->
+            <div
+              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 gradient-bg shadow-xl w-12 h-12 rounded-full card-hover"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">2</span>
+              </div>
+              <div
+                class="order-1 timeline-card rounded-lg shadow-xl w-5/12 px-6 py-4 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">
+                  Seleksi dan Pengumuman
+                </h3>
+                <p class="text-sm text-gray-400">
+                  Seleksi akan dilakukan setelah periode pendaftaran, dan
+                  hasilnya akan diumumkan pada bulan Juli 2025.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DAAD Pros and Cons -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Pros -->
+            <div class="feature-card p-8 rounded-2xl card-hover">
+              <h3 class="text-xl font-bold text-white mb-4">Pro</h3>
+              <ul class="space-y-3 list-disc list-inside text-gray-400">
+                <li>
+                  <strong>Peluang Belajar di Jerman:</strong> DAAD memberikan
+                  kesempatan kepada mahasiswa untuk belajar di
+                  universitas-universitas ternama di Jerman.
+                </li>
+                <li>
+                  <strong>Bantuan Biaya Penuh:</strong> Beasiswa ini menanggung
+                  biaya pendidikan, termasuk SPP dan biaya akademik lainnya.
+                  Selain itu, juga mencakup biaya hidup berupa uang saku
+                  bulanan.
+                </li>
+                <li>
+                  <strong>Akses Internasional:</strong> DAAD tidak hanya
+                  terbatas pada pendidikan di dalam negeri, tetapi juga membuka
+                  kesempatan untuk studi di luar negeri.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cons -->
+            <div class="feature-card p-8 rounded-2xl card-hover">
+              <h3 class="text-xl font-bold text-white mb-4">Kontra</h3>
+              <ul class="space-y-3 list-disc list-inside text-gray-400">
+                <li>
+                  <strong>Persyaratan Akademik dan Non-Akademik Tinggi:</strong>
+                  Memerlukan prestasi akademik yang baik dan IPK minimal 3.0.
+                  Selain itu, mahasiswa juga harus aktif dalam kegiatan
+                  ekstrakurikuler dan memiliki prestasi di bidang akademik atau
+                  non-akademik minimal di tingkat kota/kotamadya.
+                </li>
+                <li>
+                  <strong>Persaingan Ketat:</strong> Program ini sangat
+                  kompetitif dengan banyak calon pendaftar setiap tahunnya.
+                </li>
+                <li>
+                  <strong>Persyaratan Dokumen yang Ribet:</strong> Pendaftar
+                  harus menyiapkan berbagai dokumen seperti sertifikat prestasi,
+                  rekomendasi dari pihak berwenang, LoA Unconditional atau surat
+                  keterangan aktif kuliah, sertifikat UKBI, sertifikat bahasa
+                  Jerman, esai dengan judul tertentu, rencana studi atau
+                  proposal disertasi, dan lain-lain.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DAAD Requirements -->
+          <div
+            class="feature-card p-8 rounded-2xl card-hover mb-12"
+          >
+            <h3 class="text-xl font-bold text-white mb-4">Persyaratan</h3>
+            <ul class="space-y-3 list-disc list-inside text-gray-400">
+              <li><strong>Kewarganegaraan:</strong> WNI.</li>
+              <li>
+                <strong>Status Mahasiswa:</strong> Mahasiswa baru atau aktif
+                yang berada di semester 1 hingga 3 untuk jenjang S1, S2, atau
+                S3.
+              </li>
+              <li>
+                <strong>Prestasi Akademik:</strong> IPK minimal 3,00 untuk S1,
+                3,25 untuk S2, dan 3,40 untuk S3.
+              </li>
+              <li>
+                <strong>Prestasi Non-Akademik:</strong> Memiliki sertifikat
+                prestasi akademik atau non-akademik tingkat
+                internasional/nasional.
+              </li>
+              <li>
+                <strong>Rekomendasi:</strong> Mendapatkan rekomendasi dari guru
+                BK (untuk S1) atau pimpinan perguruan tinggi/pembimbing akademik
+                (untuk S2 dan S3).
+              </li>
+              <li>
+                <strong>Perguruan Tinggi:</strong> Diterima di perguruan tinggi
+                dalam negeri minimal akreditasi B/Baik Sekali atau perguruan
+                tinggi luar negeri yang diakui oleh Direktorat Jenderal
+                Pendidikan Tinggi (Ditjen Dikti).
+              </li>
+              <li>
+                <strong>Lain-lain:</strong> Bukan dosen, guru, tenaga
+                kependidikan, atau pelaku budaya. Hanya untuk kelas reguler.
+                Berkomitmen mempertahankan IPK minimal yang ditentukan.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Erasmus Section -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">
+            Erasmus
+          </h2>
+
+          <!-- Timeline Section -->
+          <div class="relative wrap overflow-hidden p-10 h-full mb-12">
+            <div
+              class="absolute border-2-2 border-purple-500 h-full border"
+              style="left: 50%"
+            ></div>
+
+            <!-- Right Timeline Item -->
+            <div
+              class="mb-8 flex justify-between items-center w-full right-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 gradient-bg shadow-xl w-12 h-12 rounded-full card-hover"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">1</span>
+              </div>
+              <div
+                class="order-1 timeline-card rounded-lg shadow-xl w-5/12 px-6 py-4 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">Pendaftaran</h3>
+                <p class="text-sm text-gray-400">
+                  Pendaftaran untuk program Erasmus 2025 dibuka dari bulan
+                  Januari hingga Maret 2025.
+                </p>
+              </div>
+            </div>
+
+            <!-- Left Timeline Item -->
+            <div
+              class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+            >
+              <div class="order-1 w-5/12"></div>
+              <div
+                class="z-20 flex items-center order-1 gradient-bg shadow-xl w-12 h-12 rounded-full card-hover"
+              >
+                <span class="mx-auto font-semibold text-lg text-white">2</span>
+              </div>
+              <div
+                class="order-1 timeline-card rounded-lg shadow-xl w-5/12 px-6 py-4 card-hover"
+              >
+                <h3 class="font-bold text-white text-lg mb-2">
+                  Seleksi dan Pengumuman
+                </h3>
+                <p class="text-sm text-gray-400">
+                  Seleksi akan dilakukan setelah periode pendaftaran, dan
+                  hasilnya akan diumumkan pada bulan April 2025.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Erasmus Pros and Cons -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Pros -->
+            <div class="feature-card p-8 rounded-2xl card-hover">
+              <h3 class="text-xl font-bold text-white mb-4">Pro</h3>
+              <ul class="space-y-3 list-disc list-inside text-gray-400">
+                <li>
+                  <strong>Peluang Belajar di Uni Eropa:</strong> Erasmus
+                  memberikan kesempatan kepada mahasiswa untuk belajar di
+                  universitas-universitas ternama di Uni Eropa.
+                </li>
+                <li>
+                  <strong>Bantuan Biaya Penuh:</strong> Beasiswa ini menanggung
+                  biaya pendidikan, termasuk SPP dan biaya akademik lainnya.
+                  Selain itu, juga mencakup biaya hidup berupa uang saku
+                  bulanan.
+                </li>
+                <li>
+                  <strong>Akses Internasional:</strong> Erasmus tidak hanya
+                  terbatas pada pendidikan di dalam negeri, tetapi juga membuka
+                  kesempatan untuk studi di luar negeri.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cons -->
+            <div class="feature-card p-8 rounded-2xl card-hover">
+              <h3 class="text-xl font-bold text-white mb-4">Kontra</h3>
+              <ul class="space-y-3 list-disc list-inside text-gray-400">
+                <li>
+                  <strong>Persyaratan Akademik dan Non-Akademik Tinggi:</strong>
+                  Memerlukan prestasi akademik yang baik dan IPK minimal 3.0.
+                  Selain itu, mahasiswa juga harus aktif dalam kegiatan
+                  ekstrakurikuler dan memiliki prestasi di bidang akademik atau
+                  non-akademik minimal di tingkat kota/kotamadya.
+                </li>
+                <li>
+                  <strong>Persaingan Ketat:</strong> Program ini sangat
+                  kompetitif dengan banyak calon pendaftar setiap tahunnya.
+                </li>
+                <li>
+                  <strong>Persyaratan Dokumen yang Ribet:</strong> Pendaftar
+                  harus menyiapkan berbagai dokumen seperti sertifikat prestasi,
+                  rekomendasi dari pihak berwenang, LoA Unconditional atau surat
+                  keterangan aktif kuliah, sertifikat UKBI, sertifikat bahasa
+                  Inggris atau bahasa lain yang sesuai dengan negara tujuan,
+                  esai dengan judul tertentu, rencana studi atau proposal
+                  disertasi, dan lain-lain.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Erasmus Requirements -->
+          <div
+            class="feature-card p-8 rounded-2xl card-hover mb-12"
+          >
+            <h3 class="text-xl font-bold text-white mb-4">Persyaratan</h3>
+            <ul class="space-y-3 list-disc list-inside text-gray-400">
+              <li><strong>Kewarganegaraan:</strong> WNI.</li>
+              <li>
+                <strong>Status Mahasiswa:</strong> Mahasiswa baru atau aktif
+                yang berada di semester 1 hingga 3 untuk jenjang S1, S2, atau
+                S3.
+              </li>
+              <li>
+                <strong>Prestasi Akademik:</strong> IPK minimal 3,00 untuk S1,
+                3,25 untuk S2, dan 3,40 untuk S3.
+              </li>
+              <li>
+                <strong>Prestasi Non-Akademik:</strong> Memiliki sertifikat
+                prestasi akademik atau non-akademik tingkat
+                internasional/nasional.
+              </li>
+              <li>
+                <strong>Rekomendasi:</strong> Mendapatkan rekomendasi dari guru
+                BK (untuk S1) atau pimpinan perguruan tinggi/pembimbing akademik
+                (untuk S2 dan S3).
+              </li>
+              <li>
+                <strong>Perguruan Tinggi:</strong> Diterima di perguruan tinggi
+                dalam negeri minimal akreditasi B/Baik Sekali atau perguruan
+                tinggi luar negeri yang diakui oleh Direktorat Jenderal
+                Pendidikan Tinggi (Ditjen Dikti).
+              </li>
+              <li>
+                <strong>Lain-lain:</strong> Bukan dosen, guru, tenaga
+                kependidikan, atau pelaku budaya. Hanya untuk kelas reguler.
+                Berkomitmen mempertahankan IPK minimal yang ditentukan.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Common Sections -->
+        <div class="grid md:grid-cols-1 gap-8 mt-8">
+          <!-- Recommended YouTube Channels -->
+          <div class="feature-card p-8 rounded-2xl card-hover">
+            <h2 class="text-2xl font-bold text-white mb-4 gradient-text">
+              Rekomendasi Channel YouTube
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <h3 class="text-lg font-bold text-white mb-3">Fulbright</h3>
+                <ul class="space-y-2 list-disc list-inside text-gray-400">
+                  <li>
+                    <strong>Fulbright U.S. Scholar Program:</strong> Informasi
+                    resmi tentang program Fulbright
+                  </li>
+                  <li>
+                    <strong>Learn English with Emma:</strong> Meningkatkan
+                    keterampilan berbahasa Inggris
+                  </li>
+                  <li>
+                    <strong>TED-Ed:</strong> Video pendidikan tentang berbagai
+                    topik
+                  </li>
+                  <li><strong>Duolingo:</strong> Pembelajaran bahasa gratis</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white mb-3">DAAD</h3>
+                <ul class="space-y-2 list-disc list-inside text-gray-400">
+                  <li>
+                    <strong>DAAD Scholarships for Indonesia:</strong> Informasi
+                    resmi tentang program DAAD
+                  </li>
+                  <li>
+                    <strong>Learn German with Goethe:</strong> Meningkatkan
+                    keterampilan berbahasa Jerman
+                  </li>
+                  <li>
+                    <strong>TED-Ed:</strong> Video pendidikan tentang berbagai
+                    topik
+                  </li>
+                  <li><strong>Duolingo:</strong> Pembelajaran bahasa gratis</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white mb-3">Erasmus</h3>
+                <ul class="space-y-2 list-disc list-inside text-gray-400">
+                  <li>
+                    <strong>Erasmus+:</strong> Informasi resmi tentang program
+                    Erasmus
+                  </li>
+                  <li>
+                    <strong>Learn English with Emma:</strong> Meningkatkan
+                    keterampilan berbahasa Inggris
+                  </li>
+                  <li>
+                    <strong>TED-Ed:</strong> Video pendidikan tentang berbagai
+                    topik
+                  </li>
+                  <li><strong>Duolingo:</strong> Pembelajaran bahasa gratis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visa Application Process -->
+          <div class="feature-card p-8 rounded-2xl card-hover">
+            <h2 class="text-2xl font-bold text-white mb-4 gradient-text">
+              Proses Pembuatan Visa
+            </h2>
+            <ul class="space-y-3 list-disc list-inside text-gray-400">
+              <li>
+                <strong>Persiapan Dokumen:</strong> Setelah diterima dalam
+                program, penerima beasiswa akan menerima surat undangan atau
+                dokumen terkait. Mereka perlu menyiapkan paspor yang masih
+                berlaku, formulir aplikasi visa, dan bukti dukungan keuangan.
+              </li>
+              <li>
+                <strong>Ajukan Visa:</strong> Penerima beasiswa harus mengajukan
+                permohonan visa ke Kedutaan Besar negara tujuan. Mereka mungkin
+                perlu menghadiri wawancara di mana mereka harus menunjukkan
+                rencana studi, kesiapan keuangan, dan ikatan dengan negara asal.
+              </li>
+              <li>
+                <strong>Tunggu Keputusan:</strong> Waktu pemrosesan visa
+                bervariasi. Penerima beasiswa harus memantau status aplikasi
+                mereka dan mempersiapkan diri untuk perjalanan setelah visa
+                disetujui.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mt-12 text-lg">
+          Harap diingat bahwa informasi ini dapat berubah setiap tahunnya. Kami
+          menyarankan untuk selalu memeriksa situs web resmi atau menghubungi
+          pihak beasiswa untuk mendapatkan informasi terbaru dan paling akurat.
+        </p>
+      </main>
+    </div>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
